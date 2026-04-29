@@ -531,6 +531,32 @@
 
     /* extra */
     .space { height: 50px; }
+
+    html {
+  scroll-behavior: smooth;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  display: none;
+}
+
+/* يظهر لما تنزل لتحت */
+body:has(:not(:target)) .top-btn {
+  display: block;
+}
+
+.top-btn:hover {
+  background-color: #555;
+}
   </style>
 </head>
 <body>
@@ -595,7 +621,7 @@
           <p>I build immersive digital experiences with a focus on motion, performance, and clean code. 5+ years of crafting web solutions that delight users and solve real problems.</p>
         </div>
       </div>
-
+      <div id="top"></div>
       <!-- skills -->
       <div class="skills-section">
         <h2>⚡ Tech Stack</h2>
